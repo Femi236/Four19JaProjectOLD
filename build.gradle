@@ -8,6 +8,13 @@ group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
+apply plugin: 'checkstyle'
+
+/*
+ext {
+	checkstyleVersion = '8.25'
+}
+*/
 repositories {
 	mavenCentral()
 }
@@ -24,4 +31,12 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+}
+
+checkstyle {
+	toolVersion = "8.25"
+
+	configFile = rootProject.file('config/checkstyle/checkstyle.xml')
+
+
 }
