@@ -2,8 +2,10 @@ package com.example.demo.Entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 
 @Entity
+@IdClass(StepsId.class)
 public class Steps {
 
     @Id
