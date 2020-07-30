@@ -38,5 +38,9 @@ checkstyle {
 
 	configFile = rootProject.file('config/checkstyle/checkstyle.xml')
 
+	ignoreFailures = false
+	maxErrors = 0
+	maxWarnings = 0
+
 
 }
