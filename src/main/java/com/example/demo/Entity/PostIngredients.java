@@ -13,14 +13,14 @@ public class PostIngredients {
     @Id
     private long ingredient;
 
-    private Integer amount;
+    private String amount;
 
     //private String unit;
 
     public PostIngredients() {
     }
 
-    public PostIngredients(long post, long ingredient, Integer amount) {
+    public PostIngredients(long post, long ingredient, String amount) {
         this.post = post;
         this.ingredient = ingredient;
         this.amount = amount;
@@ -43,11 +43,11 @@ public class PostIngredients {
         this.ingredient = ingredient;
     }
 
-    public Integer getAmount() {
+    public String getAmount() {
         return amount;
     }
 
-    public void setAmount(Integer amount) {
+    public void setAmount(String amount) {
         this.amount = amount;
     }
 
