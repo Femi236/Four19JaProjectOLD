@@ -1,7 +1,6 @@
-package com.example.demo.Entity;
+package com.example.demo.entities;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
 @Table(name = "comment")
