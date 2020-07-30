@@ -13,18 +13,42 @@ public class PostIngredients {
     @Id
     private long ingredient;
 
-    private Integer amount;
+    private String amount;
 
     //private String unit;
 
     public PostIngredients() {
     }
 
-    public PostIngredients(long post, long ingredient, Integer amount) {
+    public PostIngredients(long post, long ingredient, String amount) {
         this.post = post;
         this.ingredient = ingredient;
         this.amount = amount;
         //this.unit = unit;
+    }
+
+    public long getPost() {
+        return post;
+    }
+
+    public void setPost(long post) {
+        this.post = post;
+    }
+
+    public long getIngredient() {
+        return ingredient;
+    }
+
+    public void setIngredient(long ingredient) {
+        this.ingredient = ingredient;
+    }
+
+    public String getAmount() {
+        return amount;
+    }
+
+    public void setAmount(String amount) {
+        this.amount = amount;
     }
 
     @Override
