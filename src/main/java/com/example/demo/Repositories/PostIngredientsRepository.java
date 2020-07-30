@@ -1,7 +1,7 @@
 package com.example.demo.Repositories;
 
-import com.example.demo.Entity.User;
+import com.example.demo.Entity.PostIngredients;
 import org.springframework.data.repository.CrudRepository;
 
-public interface PostIngredientsRepository extends CrudRepository<User, Integer> {
+public interface PostIngredientsRepository extends CrudRepository<PostIngredients, Integer> {
 }

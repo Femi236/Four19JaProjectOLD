@@ -1,7 +1,7 @@
 package com.example.demo.Repositories;
 
-import com.example.demo.Entity.User;
+import com.example.demo.Entity.Equipment;
 import org.springframework.data.repository.CrudRepository;
 
-public interface EquipmentRepository extends CrudRepository<User, Integer> {
+public interface EquipmentRepository extends CrudRepository<Equipment, Integer> {
 }
