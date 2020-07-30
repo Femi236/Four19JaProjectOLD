@@ -1,12 +1,22 @@
 package com.example.demo.entities;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 
 @Entity // This tells Hibernate to make a table out of this class
 @Table(name = "category")
 public class Category {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(
+            strategy= GenerationType.AUTO,
+            generator="native"
+    )
+    @GenericGenerator(
+            name = "native",
+            strategy = "native"
+    )
+
     private Integer categoryID;
 
     private String name;
