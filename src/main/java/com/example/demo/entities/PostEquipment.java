@@ -9,10 +9,15 @@ public class PostEquipment {
     private Integer post;
 
     @Id
-    private Integer Equipment;
+    private Integer equipment;
 
     public PostEquipment() {
         super();
+    }
+
+    public PostEquipment(Integer post, Integer equipment) {
+        this.post = post;
+        this.equipment = equipment;
     }
 
     public Integer getPost() {
@@ -24,10 +29,10 @@ public class PostEquipment {
     }
 
     public Integer getEquipment() {
-        return Equipment;
+        return equipment;
     }
 
     public void setEquipment(Integer equipment) {
-        Equipment = equipment;
+        this.equipment = equipment;
     }
 }

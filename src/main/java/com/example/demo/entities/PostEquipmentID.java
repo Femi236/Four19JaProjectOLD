@@ -8,7 +8,8 @@ public class PostEquipmentID implements Serializable {
 
     private Integer equipment;
 
-    public PostEquipmentID() {
-        super();
+    public PostEquipmentID(Integer post, Integer equipment) {
+        this.post = post;
+        this.equipment = equipment;
     }
 }

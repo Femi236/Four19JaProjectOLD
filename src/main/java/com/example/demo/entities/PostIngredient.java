@@ -3,42 +3,42 @@ package com.example.demo.entities;
 import javax.persistence.*;
 
 @Entity
-@IdClass(PostIngredientsID.class)
-@Table(name = "postIngredients")
-public class PostIngredients {
+@IdClass(PostIngredientID.class)
+@Table(name = "postIngredient")
+public class PostIngredient {
     @Id
-    private long post;
+    private Integer post;
 
     @Id
-    private long ingredient;
+    private Integer ingredient;
 
     private String amount;
 
     //private String unit;
 
-    public PostIngredients() {
+    public PostIngredient() {
     }
 
-    public PostIngredients(long post, long ingredient, String amount) {
+    public PostIngredient(Integer post, Integer ingredient, String amount) {
         this.post = post;
         this.ingredient = ingredient;
         this.amount = amount;
         //this.unit = unit;
     }
 
-    public long getPost() {
+    public Integer getPost() {
         return post;
     }
 
-    public void setPost(long post) {
+    public void setPost(Integer post) {
         this.post = post;
     }
 
-    public long getIngredient() {
+    public Integer getIngredient() {
         return ingredient;
     }
 
-    public void setIngredient(long ingredient) {
+    public void setIngredient(Integer ingredient) {
         this.ingredient = ingredient;
     }
 
@@ -54,7 +54,7 @@ public class PostIngredients {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PostIngredients that = (PostIngredients) o;
+        PostIngredient that = (PostIngredient) o;
         return post == that.post &&
                 ingredient == that.ingredient &&
                 amount.equals(that.amount);
