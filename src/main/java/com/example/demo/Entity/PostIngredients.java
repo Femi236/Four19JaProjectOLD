@@ -27,6 +27,30 @@ public class PostIngredients {
         //this.unit = unit;
     }
 
+    public long getPost() {
+        return post;
+    }
+
+    public void setPost(long post) {
+        this.post = post;
+    }
+
+    public long getIngredient() {
+        return ingredient;
+    }
+
+    public void setIngredient(long ingredient) {
+        this.ingredient = ingredient;
+    }
+
+    public Integer getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
