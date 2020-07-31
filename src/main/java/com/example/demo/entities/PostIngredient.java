@@ -1,10 +1,11 @@
 package com.example.demo.entities;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @IdClass(PostIngredientID.class)
-@Table(name = "postIngredient")
+@Table(name = "postingredient")
 public class PostIngredient {
     @Id
     private Integer post;
@@ -55,8 +56,8 @@ public class PostIngredient {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PostIngredient that = (PostIngredient) o;
-        return post == that.post &&
-                ingredient == that.ingredient &&
+        return post.equals(that.post) &&
+                ingredient.equals(that.ingredient) &&
                 amount.equals(that.amount);
     }
 }
