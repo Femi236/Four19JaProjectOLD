@@ -6,7 +6,7 @@ public class PostIngredientID implements Serializable {
     private Integer post;
     private Integer ingredient;
 
-    public PostIngredientID () {
+    public PostIngredientID() {
 
     }
 

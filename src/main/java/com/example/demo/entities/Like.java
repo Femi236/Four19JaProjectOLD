@@ -1,7 +1,7 @@
 package com.example.demo.entities;
 
-import javax.persistence.Id;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.IdClass;
 
 @Entity

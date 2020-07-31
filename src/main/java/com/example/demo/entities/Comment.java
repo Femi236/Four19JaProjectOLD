@@ -1,14 +1,17 @@
 package com.example.demo.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.*;
 
 @Entity
 @Table(name = "comment")
 public class Comment {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
     private long commentID;
 
@@ -18,7 +21,7 @@ public class Comment {
 
     private long post;
 
-    public Comment () {
+    public Comment() {
     }
 
     public Comment(long commentID, long commenter, String comment, long post) {
@@ -62,12 +65,16 @@ public class Comment {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Comment comment1 = (Comment) o;
-        return commentID == comment1.commentID &&
-                commenter == comment1.commenter &&
-                post == comment1.post &&
-                comment.equals(comment1.comment);
+        return commentID == comment1.commentID
+                && commenter == comment1.commenter
+                && post == comment1.post
+                && comment.equals(comment1.comment);
     }
 }

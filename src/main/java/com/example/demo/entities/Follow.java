@@ -1,6 +1,9 @@
 package com.example.demo.entities;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.persistence.Table;
 
 @Entity
 @IdClass(FollowID.class)
@@ -12,7 +15,7 @@ public class Follow {
     @Id
     private long followed;
 
-    public Follow () {
+    public Follow() {
     }
 
     public Follow(long follower, long followed) {
@@ -38,10 +41,14 @@ public class Follow {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Follow follow = (Follow) o;
-        return follower == follow.follower &&
-                followed == follow.followed;
+        return follower == follow.follower
+                && followed == follow.followed;
     }
 }

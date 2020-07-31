@@ -1,21 +1,24 @@
 package com.example.demo.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.*;
 
 @Entity
 @Table(name = "equipment")
 public class Equipment {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
 
     private Integer equipmentID;
 
     private String name;
 
-    public Equipment () {
+    public Equipment() {
     }
 
     public Equipment(Integer equipmentID, String name) {
@@ -41,10 +44,14 @@ public class Equipment {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Equipment equipment = (Equipment) o;
-        return equipmentID.equals(equipment.equipmentID) &&
-                name.equals(equipment.name);
+        return equipmentID.equals(equipment.equipmentID)
+                && name.equals(equipment.name);
     }
 }

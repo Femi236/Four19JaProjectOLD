@@ -1,6 +1,10 @@
 package com.example.demo.entities;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.persistence.Table;
 
 @Entity
 @IdClass(StepsId.class)
@@ -8,14 +12,14 @@ import javax.persistence.*;
 public class Steps {
 
     @Id
-    @Column(name="post")
+    @Column(name = "post")
     private Integer post;
 
     @Id
-    @Column(name="stepNumber")
+    @Column(name = "stepNumber")
     private Integer stepNumber;
 
-    @Column(name="instruction")
+    @Column(name = "instruction")
     private String instruction;
 
     public Steps() {

@@ -1,7 +1,9 @@
 package com.example.demo.entities;
 
-import javax.persistence.*;
-import java.util.Objects;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.persistence.Table;
 
 @Entity
 @IdClass(PostIngredientID.class)
@@ -53,11 +55,15 @@ public class PostIngredient {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         PostIngredient that = (PostIngredient) o;
-        return post.equals(that.post) &&
-                ingredient.equals(that.ingredient) &&
-                amount.equals(that.amount);
+        return post.equals(that.post)
+                && ingredient.equals(that.ingredient)
+                && amount.equals(that.amount);
     }
 }
