@@ -1,18 +1,17 @@
 package com.example.demo.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.IdClass;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @IdClass(FollowID.class)
 @Table(name = "follow")
 public class Follow {
     @Id
+    @Column(name = "follower")
     private long follower;
 
     @Id
+    @Column(name = "followed")
     private long followed;
 
     public Follow() {

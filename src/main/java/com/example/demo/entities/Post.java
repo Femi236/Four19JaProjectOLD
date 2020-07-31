@@ -1,18 +1,19 @@
 package com.example.demo.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "post")
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "post_id")
     private Integer postID;
 
+    @Column(name = "user")
     private Integer user;
 
+    @Column(name = "time_taken")
     private Integer timeTaken;
 
     public Post() {

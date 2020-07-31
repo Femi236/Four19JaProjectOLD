@@ -16,7 +16,7 @@ public class Steps {
     private Integer post;
 
     @Id
-    @Column(name = "stepNumber")
+    @Column(name = "step_number")
     private Integer stepNumber;
 
     @Column(name = "instruction")

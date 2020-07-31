@@ -1,16 +1,17 @@
 package com.example.demo.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.IdClass;
+import javax.persistence.*;
 
 @Entity
 @IdClass(PostEquipmentID.class)
+@Table(name = "postequipment")
 public class PostEquipment {
     @Id
+    @Column(name = "post")
     private Integer post;
 
     @Id
+    @Column(name = "equipment")
     private Integer equipment;
 
     public PostEquipment() {

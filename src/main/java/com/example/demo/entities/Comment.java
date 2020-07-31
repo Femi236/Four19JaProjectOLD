@@ -1,10 +1,7 @@
 package com.example.demo.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
@@ -13,12 +10,16 @@ public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
+    @Column(name = "comment_id")
     private long commentID;
 
+    @Column(name = "commenter")
     private long commenter;
 
+    @Column(name = "comment")
     private String comment;
 
+    @Column(name = "post")
     private long post;
 
     public Comment() {

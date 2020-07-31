@@ -1,20 +1,20 @@
 package com.example.demo.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.IdClass;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @IdClass(PostIngredientID.class)
 @Table(name = "postingredient")
 public class PostIngredient {
     @Id
+    @Column(name = "post")
     private Integer post;
 
     @Id
+    @Column(name = "ingredient")
     private Integer ingredient;
 
+    @Column(name = "amount")
     private String amount;
 
     //private String unit;
