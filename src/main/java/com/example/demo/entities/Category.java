@@ -19,8 +19,7 @@ public class Category {
     public Category() {
     }
 
-    public Category(Integer categoryID, String name) {
-        this.categoryID = categoryID;
+    public Category(String name) {
         this.name = name;
     }
 

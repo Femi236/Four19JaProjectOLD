@@ -19,8 +19,7 @@ public class Equipment {
     public Equipment() {
     }
 
-    public Equipment(Integer equipmentID, String name) {
-        this.equipmentID = equipmentID;
+    public Equipment(String name) {
         this.name = name;
     }
 

@@ -10,4 +10,9 @@ public class LikeID implements Serializable {
     public LikeID() {
         super();
     }
+
+    public LikeID(Integer user, Integer post) {
+        this.user = user;
+        this.post = post;
+    }
 }

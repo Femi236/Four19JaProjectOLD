@@ -19,6 +19,11 @@ public class Like {
         super();
     }
 
+    public Like(Integer user, Integer post) {
+        this.user = user;
+        this.post = post;
+    }
+
     public Integer getUser() {
         return user;
     }

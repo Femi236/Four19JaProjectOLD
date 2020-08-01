@@ -17,6 +17,10 @@ public class Ingredient {
         super();
     }
 
+    public Ingredient(String name) {
+        this.name = name;
+    }
+
     public Integer getIngredientID() {
         return ingredientID;
     }

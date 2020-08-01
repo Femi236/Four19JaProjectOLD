@@ -20,6 +20,11 @@ public class Post {
         super();
     }
 
+    public Post(Integer user, Integer timeTaken) {
+        this.user = user;
+        this.timeTaken = timeTaken;
+    }
+
     public Integer getTimeTaken() {
         return timeTaken;
     }

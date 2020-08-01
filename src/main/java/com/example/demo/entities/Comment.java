@@ -25,8 +25,7 @@ public class Comment {
     public Comment() {
     }
 
-    public Comment(long commentID, long commenter, String comment, long post) {
-        this.commentID = commentID;
+    public Comment(long commenter, String comment, long post) {
         this.commenter = commenter;
         this.comment = comment;
         this.post = post;
