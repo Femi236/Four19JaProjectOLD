@@ -19,7 +19,7 @@ public class FollowController {
     private FollowRepository followRepository;
 
     @PostMapping(path = "/addFollow") // Map ONLY POST Requests
-    public @ResponseBody String addNewFollow(@RequestParam long follower, @RequestParam long followed) {
+    public @ResponseBody String addNewFollow(@RequestParam Integer follower, @RequestParam Integer followed) {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
 

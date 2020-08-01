@@ -23,11 +23,11 @@ public class PostIngredientController {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
 
-        PostIngredient p = new PostIngredient();
-        p.setPost(post);
-        p.setIngredient(ingredient);
-        p.setAmount(amount);
-        postIngredientRepository.save(p);
+        PostIngredient pi = new PostIngredient();
+        pi.setPost(post);
+        pi.setIngredient(ingredient);
+        pi.setAmount(amount);
+        postIngredientRepository.save(pi);
         return "Saved";
     }
 

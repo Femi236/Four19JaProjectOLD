@@ -9,6 +9,8 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import java.util.Objects;
+
 @Entity
 @Table(name = "comment")
 public class Comment {
@@ -16,39 +18,39 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
     @Column(name = "comment_id")
-    private long commentID;
+    private Integer commentID;
 
     @Column(name = "commenter")
-    private long commenter;
+    private Integer commenter;
 
     @Column(name = "comment")
     private String comment;
 
     @Column(name = "post")
-    private long post;
+    private Integer post;
 
     public Comment() {
     }
 
-    public Comment(long commenter, String comment, long post) {
+    public Comment(Integer commenter, String comment, Integer post) {
         this.commenter = commenter;
         this.comment = comment;
         this.post = post;
     }
 
-    public long getCommentID() {
+    public Integer getCommentID() {
         return commentID;
     }
 
-    public void setCommentID(long commentID) {
+    public void setCommentID(Integer commentID) {
         this.commentID = commentID;
     }
 
-    public long getCommenter() {
+    public Integer getCommenter() {
         return commenter;
     }
 
-    public void setCommenter(long commenter) {
+    public void setCommenter(Integer commenter) {
         this.commenter = commenter;
     }
 
@@ -60,11 +62,11 @@ public class Comment {
         this.comment = comment;
     }
 
-    public long getPost() {
+    public Integer getPost() {
         return post;
     }
 
-    public void setPost(long post) {
+    public void setPost(Integer post) {
         this.post = post;
     }
 
@@ -77,9 +79,9 @@ public class Comment {
             return false;
         }
         Comment comment1 = (Comment) o;
-        return commentID == comment1.commentID
-                && commenter == comment1.commenter
-                && post == comment1.post
-                && comment.equals(comment1.comment);
+        return commentID.equals(comment1.commentID)
+                && commenter.equals(comment1.commenter)
+                && comment.equals(comment1.comment)
+                && post.equals(comment1.post);
     }
 }

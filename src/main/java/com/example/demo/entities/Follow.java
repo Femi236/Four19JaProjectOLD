@@ -12,33 +12,33 @@ import javax.persistence.Table;
 public class Follow {
     @Id
     @Column(name = "follower")
-    private long follower;
+    private Integer follower;
 
     @Id
     @Column(name = "followed")
-    private long followed;
+    private Integer followed;
 
     public Follow() {
     }
 
-    public Follow(long follower, long followed) {
+    public Follow(Integer follower, Integer followed) {
         this.follower = follower;
         this.followed = followed;
     }
 
-    public long getFollower() {
+    public Integer getFollower() {
         return follower;
     }
 
-    public void setFollower(long follower) {
+    public void setFollower(Integer follower) {
         this.follower = follower;
     }
 
-    public long getFollowed() {
+    public Integer getFollowed() {
         return followed;
     }
 
-    public void setFollowed(long followed) {
+    public void setFollowed(Integer followed) {
         this.followed = followed;
     }
 
@@ -51,7 +51,7 @@ public class Follow {
             return false;
         }
         Follow follow = (Follow) o;
-        return follower == follow.follower
-                && followed == follow.followed;
+        return follower.equals(follow.follower)
+                && followed.equals(follow.followed);
     }
 }

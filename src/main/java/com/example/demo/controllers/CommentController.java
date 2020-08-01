@@ -19,8 +19,8 @@ public class CommentController {
     private CommentRepository commentRepository;
 
     @PostMapping(path = "/addComment") // Map ONLY POST Requests
-    public @ResponseBody String addNewComment(@RequestParam long commenter, @RequestParam String comment,
-                                               @RequestParam long post) {
+    public @ResponseBody String addNewComment(@RequestParam Integer commenter, @RequestParam String comment,
+                                               @RequestParam Integer post) {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
 
