@@ -28,8 +28,8 @@ public class IngredientController {
         return "Saved";
     }
 
-    @GetMapping(path = "/allIngredients")
-    public @ResponseBody Iterable<Ingredient> getAllIngredients() {
+    @GetMapping(path = "/allIngredient")
+    public @ResponseBody Iterable<Ingredient> getAllIngredient() {
         // This returns a JSON or XML with the users
         return ingredientRepository.findAll();
     }

@@ -33,7 +33,7 @@ public class CommentController {
     }
 
     @GetMapping(path = "/allComment")
-    public @ResponseBody Iterable<Comment> getAllComments() {
+    public @ResponseBody Iterable<Comment> getAllComment() {
         // This returns a JSON or XML with the comments
         return commentRepository.findAll();
     }

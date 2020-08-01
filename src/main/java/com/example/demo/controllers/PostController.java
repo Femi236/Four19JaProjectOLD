@@ -19,7 +19,7 @@ public class PostController {
 
     @PostMapping(path = "/addPost") // Map ONLY POST Requests
     public @ResponseBody
-    String addNewUser(@RequestParam Integer user,@RequestParam Integer timeTaken) {
+    String addNewPost(@RequestParam Integer user,@RequestParam Integer timeTaken) {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
 
@@ -30,8 +30,8 @@ public class PostController {
         return "Saved";
     }
 
-    @GetMapping(path = "/allPosts")
-    public @ResponseBody Iterable<Post> getAllPosts() {
+    @GetMapping(path = "/allPost")
+    public @ResponseBody Iterable<Post> getAllPost() {
         // This returns a JSON or XML with the users
         return postRepository.findAll();
     }

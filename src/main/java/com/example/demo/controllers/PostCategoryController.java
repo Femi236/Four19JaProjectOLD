@@ -29,8 +29,8 @@ public class PostCategoryController {
         return "Saved";
     }
 
-    @GetMapping(path = "/allPostCategories")
-    public @ResponseBody Iterable<PostCategory> getAllPostCategories() {
+    @GetMapping(path = "/allPostCategory")
+    public @ResponseBody Iterable<PostCategory> getAllPostCategory() {
         // This returns a JSON or XML with the users
         return postCategoryRepository.findAll();
     }

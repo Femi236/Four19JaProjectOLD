@@ -31,8 +31,8 @@ public class StepsController {
         return "Saved";
     }
 
-    @GetMapping(path = "/allSteps")
-    public @ResponseBody Iterable<Steps> getAllSteps() {
+    @GetMapping(path = "/allStep")
+    public @ResponseBody Iterable<Steps> getAllStep() {
         // This returns a JSON or XML with the users
         return stepsRepository.findAll();
     }

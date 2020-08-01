@@ -31,7 +31,7 @@ public class FollowController {
     }
 
     @GetMapping(path = "/allFollow")
-    public @ResponseBody Iterable<Follow> getAllFollows() {
+    public @ResponseBody Iterable<Follow> getAllFollow() {
         // This returns a JSON or XML with the follows
         return followRepository.findAll();
     }

@@ -29,8 +29,8 @@ public class CategoryController {
         return "Saved";
     }
 
-    @GetMapping(path = "/allCategories")
-    public @ResponseBody Iterable<Category> getAllCategories() {
+    @GetMapping(path = "/allCategory")
+    public @ResponseBody Iterable<Category> getAllCategory() {
         // This returns a JSON or XML with the categories
         return categoryRepository.findAll();
     }
