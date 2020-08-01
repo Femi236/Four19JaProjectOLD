@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @IdClass(LikeID.class)
-@Table(name = "likes")
+@Table(name = "favourite")
 public class Like {
 
     @Id
