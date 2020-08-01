@@ -43,4 +43,17 @@ public class Like {
     public void setPost(Integer post) {
         this.post = post;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Like like = (Like) o;
+        return user.equals(like.user)
+                && post.equals(like.post);
+    }
 }

@@ -2,15 +2,15 @@ package com.example.demo.entities;
 
 import java.io.Serializable;
 
-public class StepsId implements Serializable {
+public class StepsID implements Serializable {
     private Integer post;
     private Integer stepNumber;
 
-    public StepsId(){
+    public StepsID(){
 
     }
 
-    public StepsId(Integer post, Integer stepNumber) {
+    public StepsID(Integer post, Integer stepNumber) {
         this.post = post;
         this.stepNumber = stepNumber;
     }

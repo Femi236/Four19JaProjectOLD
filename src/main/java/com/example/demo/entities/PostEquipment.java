@@ -42,4 +42,17 @@ public class PostEquipment {
     public void setEquipment(Integer equipment) {
         this.equipment = equipment;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        PostEquipment that = (PostEquipment) o;
+        return post.equals(that.post)
+                && equipment.equals(that.equipment);
+    }
 }

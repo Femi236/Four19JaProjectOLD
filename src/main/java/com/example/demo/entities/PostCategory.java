@@ -18,8 +18,6 @@ public class PostCategory {
     @Column(name = "category")
     private Integer category;
 
-
-
     public PostCategory() {
 
     }
@@ -43,5 +41,18 @@ public class PostCategory {
 
     public void setCategory(Integer category) {
         this.category = category;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        PostCategory that = (PostCategory) o;
+        return post.equals(that.post)
+                && category.equals(that.category);
     }
 }

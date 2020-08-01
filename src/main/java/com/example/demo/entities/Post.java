@@ -53,4 +53,18 @@ public class Post {
     public void setTimeTaken(Integer timeTaken) {
         this.timeTaken = timeTaken;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Post post = (Post) o;
+        return postID.equals(post.postID)
+                && user.equals(post.user)
+                && timeTaken.equals(post.timeTaken);
+    }
 }

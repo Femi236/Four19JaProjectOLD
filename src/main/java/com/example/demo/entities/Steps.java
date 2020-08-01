@@ -7,7 +7,7 @@ import javax.persistence.IdClass;
 import javax.persistence.Table;
 
 @Entity
-@IdClass(StepsId.class)
+@IdClass(StepsID.class)
 @Table(name = "steps")
 public class Steps {
 
@@ -56,14 +56,17 @@ public class Steps {
         this.instruction = instruction;
     }
 
-
     @Override
     public boolean equals(Object o) {
-        if (o instanceof Steps) {
-            Steps step = (Steps) o;
-
-            return post == step.post && stepNumber == step.stepNumber;
+        if (this == o) {
+            return true;
         }
-        return false;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Steps steps = (Steps) o;
+        return post.equals(steps.post)
+                && stepNumber.equals(steps.stepNumber)
+                && instruction.equals(steps.instruction);
     }
 }
