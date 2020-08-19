@@ -2,17 +2,16 @@ package com.example.demo.entities;
 
 import javax.persistence.*;
 
-import com.example.demo.security.Role;
 import org.hibernate.annotations.GenericGenerator;
 
 import java.util.Collection;
 
 @Entity // This tells Hibernate to make a table out of this class
-@Table(name = "user")
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
-    @GenericGenerator(name = "native", strategy = "native")
+    @GeneratedValue(strategy = GenerationType.AUTO/*, generator = "native"*/)
+    //@GenericGenerator(name = "native", strategy = "native")
     @Column(name = "user_id")
     private Integer userID;
 
@@ -35,9 +34,9 @@ public class User {
     @JoinTable(
             name = "users_roles",
             joinColumns = @JoinColumn(
-                    name = "user_id", referencedColumnName = "id"),
+                    name = "user_id", referencedColumnName = "user_id"),
             inverseJoinColumns = @JoinColumn(
-                    name = "role_id", referencedColumnName = "id"))
+                    name = "role_id", referencedColumnName = "role_id"))
 
     private Collection<Role> roles;
 

@@ -1,13 +1,17 @@
-package com.example.demo.security;
+package com.example.demo.entities;
 
 import javax.persistence.*;
 
 @Entity
+@Table(name = "role")
 public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @Column(name = "role_id")
+    private Integer roleID;
+
+    @Column(name = "name")
     private String name;
 
     public Role() {
@@ -19,11 +23,11 @@ public class Role {
         this.name = name;
     }
 
-    public Long getId() {
-        return id;
+    public Integer getId() {
+        return roleID;
     }
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(Integer id) {
+        this.roleID = id;
     }
     public String getName() {
         return name;
